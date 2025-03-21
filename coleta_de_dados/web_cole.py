@@ -7,9 +7,6 @@ url = "https://www.casadocodigo.com.br/collections/livros-de-programacao"
 requisicao = requests.get(url)
 conteudo = BeautifulSoup(requisicao.text, features='html.parser')
 
-# print(conteudo.text.strip())
-
-
 for item in conteudo.find_all('a'):
     titulo = item.text.strip()
     print('Titulo: ', titulo)
