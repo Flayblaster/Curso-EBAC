@@ -1,0 +1,11 @@
+Data,Produto,Categoria,Quantidade,Preço Unitário,Cidade
+2024-01-01,Celular,Eletrônicos,2,1500.0,São Paulo
+2024-01-02,Notebook,Eletrônicos,1,3500.0,Rio de Janeiro
+2024-01-03,Cadeira,Móveis,4,300.0,Belo Horizonte
+2024-01-04,Mesa,Móveis,1,700.0,Curitiba
+2024-01-05,Fone de Ouvido,Eletrônicos,5,200.0,Porto Alegre
+2024-01-06,Teclado,Eletrônicos,3,150.0,Salvador
+2024-01-07,Monitor,Eletrônicos,2,1200.0,Recife
+2024-01-08,Sofá,Móveis,1,2500.0,Fortaleza
+2024-01-09,Impressora,Eletrônicos,2,800.0,Brasília
+2024-01-10,Mouse,Eletrônicos,6,100.0,Manaus
