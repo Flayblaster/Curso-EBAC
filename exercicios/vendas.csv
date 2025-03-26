@@ -1,11 +1,101 @@
 Data,Produto,Categoria,Quantidade,Preço Unitário,Cidade
-2024-01-01,Celular,Eletrônicos,2,1500.0,São Paulo
-2024-01-02,Notebook,Eletrônicos,1,3500.0,Rio de Janeiro
-2024-01-03,Cadeira,Móveis,4,300.0,Belo Horizonte
-2024-01-04,Mesa,Móveis,1,700.0,Curitiba
-2024-01-05,Fone de Ouvido,Eletrônicos,5,200.0,Porto Alegre
-2024-01-06,Teclado,Eletrônicos,3,150.0,Salvador
-2024-01-07,Monitor,Eletrônicos,2,1200.0,Recife
-2024-01-08,Sofá,Móveis,1,2500.0,Fortaleza
-2024-01-09,Impressora,Eletrônicos,2,800.0,Brasília
-2024-01-10,Mouse,Eletrônicos,6,100.0,Manaus
+2024-02-01,Smart Speaker,Eletrônicos,8,1911.52,Ribeirão Preto
+2024-02-02,Monitor,Eletrônicos,5,4504.51,Brasília
+2024-02-03,Aspirador de Pó,Eletrodomésticos,4,363.71,Vitória
+2024-02-04,Celular,Eletrônicos,9,4003.18,Aracaju
+2024-02-05,Celular,Eletrônicos,5,3677.37,Florianópolis
+2024-02-06,Bicicleta,Esporte e Lazer,8,2845.51,Vitória
+2024-02-07,Memória RAM,Eletrônicos,9,308.55,Joinville
+2024-02-08,Liquidificador,Outros,1,4386.5,Florianópolis
+2024-02-09,Relógio Digital,Outros,10,2592.11,Joinville
+2024-02-10,Mochila,Acessórios,3,446.27,João Pessoa
+2024-02-11,Ventilador,Outros,2,4575.18,Uberlândia
+2024-02-12,Luminária,Decoração,10,741.62,Salvador
+2024-02-13,Bicicleta,Esporte e Lazer,2,4858.83,Maceió
+2024-02-14,Smart Speaker,Eletrônicos,10,2548.42,Niterói
+2024-02-15,Ar-Condicionado,Eletrodomésticos,6,2352.65,Recife
+2024-02-16,Smart TV,Eletrônicos,10,3657.4,Niterói
+2024-02-17,Processador,Eletrônicos,5,1997.32,São Paulo
+2024-02-18,Memória RAM,Eletrônicos,10,3913.93,Santos
+2024-02-19,Ventilador,Outros,10,1363.01,Manaus
+2024-02-20,Smart TV,Eletrônicos,4,4803.68,Aracaju
+2024-02-21,Celular,Eletrônicos,3,1620.83,Uberlândia
+2024-02-22,Liquidificador,Outros,6,2242.27,Brasília
+2024-02-23,Echo Dot,Eletrônicos,10,1141.34,João Pessoa
+2024-02-24,Lava-Louças,Eletrodomésticos,6,325.76,Fortaleza
+2024-02-25,Fogão,Eletrodomésticos,2,2205.46,João Pessoa
+2024-02-26,Patinete Elétrico,Esporte e Lazer,10,2717.63,Santos
+2024-02-27,Cafeteira,Outros,5,3359.59,João Pessoa
+2024-02-28,Monitor Ultrawide,Periféricos,3,2092.51,Cuiabá
+2024-02-01,Relógio Digital,Outros,1,924.8,Belém
+2024-02-02,Fogão,Eletrodomésticos,10,1091.65,Porto Alegre
+2024-02-03,Memória RAM,Eletrônicos,9,729.66,Salvador
+2024-02-04,Kindle,Eletrônicos,4,2980.31,Santos
+2024-02-05,Caixa de Som,Outros,7,632.79,Santos
+2024-02-06,Hoverboard,Esporte e Lazer,4,4348.48,Cuiabá
+2024-02-07,Patinete Elétrico,Esporte e Lazer,7,4095.22,Vitória
+2024-02-08,Placa de Vídeo,Eletrônicos,10,363.14,Londrina
+2024-02-09,Kindle,Eletrônicos,5,2190.91,Recife
+2024-02-10,Drone,Eletrônicos,6,2996.02,Brasília
+2024-02-11,Mesa,Móveis,8,3731.3,Rio de Janeiro
+2024-02-12,HD Externo,Eletrônicos,4,4725.4,Florianópolis
+2024-02-13,Fogão,Eletrodomésticos,9,1113.07,São Paulo
+2024-02-14,Luminária,Decoração,5,1098.27,São Luís
+2024-02-15,Tablet,Eletrônicos,2,3635.1,Porto Alegre
+2024-02-16,Impressora 3D,Periféricos,7,3911.37,São Paulo
+2024-02-17,Lava-Louças,Eletrodomésticos,10,3803.99,Curitiba
+2024-02-18,Monitor Ultrawide,Periféricos,9,4826.47,Recife
+2024-02-19,Liquidificador,Outros,9,1321.93,Ribeirão Preto
+2024-02-20,Caixa de Som,Outros,1,4887.59,Santos
+2024-02-21,Projetor,Eletrônicos,4,1586.59,Niterói
+2024-02-22,Sofá,Móveis,6,3990.01,Porto Alegre
+2024-02-23,Headset Gamer,Eletrônicos,2,4645.35,Curitiba
+2024-02-24,Lava-Louças,Eletrodomésticos,10,2231.63,Aracaju
+2024-02-25,Console de Videogame,Eletrônicos,9,1946.28,Niterói
+2024-02-26,Mesa,Móveis,1,2288.58,Campo Grande
+2024-02-27,Mochila,Acessórios,3,3654.83,Salvador
+2024-02-28,Caixa de Som,Outros,9,1923.13,Natal
+2024-02-01,Geladeira,Eletrodomésticos,7,4847.51,Natal
+2024-02-02,HD Externo,Eletrônicos,1,3254.86,Santos
+2024-02-03,Notebook,Eletrônicos,8,884.99,São Luís
+2024-02-04,Kindle,Eletrônicos,5,780.96,Recife
+2024-02-05,Micro-ondas,Eletrodomésticos,8,198.11,Manaus
+2024-02-06,Liquidificador,Outros,10,4422.35,Teresina
+2024-02-07,Secador de Cabelo,Outros,7,393.3,Niterói
+2024-02-08,Liquidificador,Outros,2,4301.66,São Paulo
+2024-02-09,Impressora,Periféricos,7,4579.47,Belém
+2024-02-10,Air Fryer,Eletrodomésticos,6,2035.87,Belo Horizonte
+2024-02-11,Monitor,Eletrônicos,3,1237.34,Londrina
+2024-02-12,Relógio Digital,Outros,10,1958.59,Natal
+2024-02-13,Echo Dot,Eletrônicos,6,2819.37,Londrina
+2024-02-14,HD Externo,Eletrônicos,1,2508.21,Recife
+2024-02-15,Roteador,Outros,8,1425.1,Campinas
+2024-02-16,Fone de Ouvido,Eletrônicos,1,1334.1,João Pessoa
+2024-02-17,Câmera,Eletrônicos,10,3291.11,Curitiba
+2024-02-18,Churrasqueira Elétrica,Outros,4,1549.46,Belém
+2024-02-19,Máquina de Lavar,Eletrodomésticos,2,4040.35,Fortaleza
+2024-02-20,Processador,Eletrônicos,3,2899.91,Sorocaba
+2024-02-21,Kindle,Eletrônicos,3,3997.63,Ribeirão Preto
+2024-02-22,Luminária,Decoração,6,224.49,Goiânia
+2024-02-23,Kindle,Eletrônicos,1,3888.96,Londrina
+2024-02-24,Cadeira,Móveis,3,562.57,Londrina
+2024-02-25,Churrasqueira Elétrica,Outros,10,189.87,Salvador
+2024-02-26,Geladeira,Eletrodomésticos,9,1225.27,Vitória
+2024-02-27,Liquidificador,Outros,2,1154.27,Belém
+2024-02-28,Cadeira,Móveis,4,1055.03,Teresina
+2024-02-01,Lava-Louças,Eletrodomésticos,8,1354.16,Niterói
+2024-02-02,Memória RAM,Eletrônicos,2,3086.25,Joinville
+2024-02-03,Caixa de Som,Outros,7,3819.11,Manaus
+2024-02-04,Fogão,Eletrodomésticos,8,2600.68,Salvador
+2024-02-05,Secador de Cabelo,Outros,3,4691.27,Salvador
+2024-02-06,Mouse,Periféricos,3,3115.2,Fortaleza
+2024-02-07,Fogão,Eletrodomésticos,8,3554.14,Cuiabá
+2024-02-08,Torradeira,Outros,1,4147.4,Recife
+2024-02-09,Kindle,Eletrônicos,8,1110.97,Joinville
+2024-02-10,Monitor,Eletrônicos,9,4194.57,Fortaleza
+2024-02-11,Roteador,Outros,4,427.4,Porto Alegre
+2024-02-12,Geladeira,Eletrodomésticos,2,2055.63,Niterói
+2024-02-13,Smart TV,Eletrônicos,5,402.18,Teresina
+2024-02-14,Impressora,Periféricos,3,2932.9,Teresina
+2024-02-15,Monitor Ultrawide,Periféricos,7,749.63,Vitória
+2024-02-16,Sofá,Móveis,7,212.43,João Pessoa
