@@ -16,12 +16,7 @@ def ftm_total():
 
     return ftm_total
 
-def prdto_mais_vndo():
-    #Localizacao do produto mais vendido 
-    loc_prdto = df['Quantidade'].idxmax()
-    
-    prdto = df['Produto'][loc_prdto]
-    return prdto
+ftm_total()
 
 def ftm_por_catga():
     #Faturamento por categoria
@@ -30,17 +25,4 @@ def ftm_por_catga():
         print(f'Categoria: {categoria} - Faturamento: ', end='')
         print(f"{df[df['Categoria'].str.contains(categoria)]['Faturamento'].sum():.2f}")
     
-def cidade_com_mais_vendas():
-    #Localizacao do produto mais vendido 
-    loc_prdto = df['Quantidade'].idxmax()
-    
-    cidade = df['Cidade'][loc_prdto]
-    return cidade
-
-
-print('Faturamento total:', ftm_total())
-print('Produto mais vendido:', prdto_mais_vndo())
-print(f'Cidade onde teve mais vendas: {cidade_com_mais_vendas()}')
 ftm_por_catga()
-print('Itens mais vendidos em 02 de Fevereiro de 2024:')
-print(df[df['Data'].str.contains('2024-02-01')]['Produto'])
