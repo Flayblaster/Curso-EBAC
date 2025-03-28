@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('C:/Users/david/OneDrive/Documentos/Curso-EBAC/Curso-EBAC/exercicios/dados_funcionarios.csv')
+df = pd.read_csv('C:/Users/david/OneDrive/Documentos/Curso-EBAC/Curso-EBAC/exercicios/dataframes/dados_funcionarios.csv')
 
 
 def media_salarial():

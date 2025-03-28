@@ -1,7 +1,7 @@
 import pandas as pd
 
 #leitura do arquivo
-arq = pd.read_csv("C:/Users/david/OneDrive/Documentos/Curso-EBAC/Curso-EBAC/exercicios/vendas.csv")
+arq = pd.read_csv("C:/Users/david/OneDrive/Documentos/Curso-EBAC/Curso-EBAC/exercicios/dataframes/vendas.csv")
 df = pd.DataFrame(arq)
 
 def ftm_total():
