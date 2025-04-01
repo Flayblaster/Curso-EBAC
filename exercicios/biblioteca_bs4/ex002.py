@@ -26,4 +26,3 @@ for titulo_vid, data_vid in zip(tag_a_vid, tag_a_dat):
     data = data_vid.text.strip()
     print(f"Titulo do vídeo: {titulo} /// HORÁRIOS: {data}")
     print("--"*50)
-
