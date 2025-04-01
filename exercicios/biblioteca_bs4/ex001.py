@@ -22,6 +22,5 @@ print(f'titulo: {titulo}\n')
 """
 As funções de procurar itens, podem ter um parâmetro que indica o nome daquela tag, podendo ser usado: class_, name e id
 """
-
 h2 = soup.find('span', class_="bstn-hl-title gui-color-primary gui-color-hover gui-color-primary-bg-after") 
 print(f'titulo h2: {h2}\n')
