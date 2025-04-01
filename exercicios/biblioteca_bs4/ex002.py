@@ -16,3 +16,14 @@ for titulo, data in zip(tag_a_tit, tag_p_dat):
     data = data.text.strip()
     print(f"Título: {titulo} /// DATA: {data}")
     print('--'*50)
+
+print(f'{"VÍDEOS TV MS RECORD":^100}')
+tag_a_vid = site.find_all('a', class_="tit webkit-box-3 flex-grow-1 ms-1")
+tag_a_dat = site.find_all('a', class_="d-block video-tag bg-light has-img has-horario")
+
+for titulo_vid, data_vid in zip(tag_a_vid, tag_a_dat):
+    titulo = titulo_vid.text.strip()
+    data = data_vid.text.strip()
+    print(f"Titulo do vídeo: {titulo} /// HORÁRIOS: {data}")
+    print("--"*50)
+
