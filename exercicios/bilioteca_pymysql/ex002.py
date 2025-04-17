@@ -36,7 +36,7 @@ def consulta_gafanhotos():
         for linha in res:
             print(f"ID: {linha['id']} - Nome: {linha['nome']}")
 
-def cadastro():
+def cadastro_unico():
     nome = str(input("Nome: "))
 
     try:
@@ -59,4 +59,26 @@ def cadastro():
         con.close()
         print('Conexão encerrada')
 
-cadastro()
+def cadastro_mult():
+    conexao()
+
+    nome = str(input('Nome: '))
+    carga = str(input('Carga horaria: '))
+    id = 31
+    try:
+        cursor = con.cursor()
+        sql = "INSERT INTO cursos (idcurso, nome, carga) VALUES (%s, %s, %s)"
+        cursor.execute(sql, (id, nome, carga))
+        con.commit()
+        id += 1
+
+        print(f"O curso {nome} foi adcionado com sucesso")
+    except pymysql.Error as e:
+        print('Erro ao cadastrar o curso', e)
+        con.rollback()
+    finally:
+        cursor.close()
+        con.close()
+        print('Conexão encerrada')
+
+cadastro_mult()
