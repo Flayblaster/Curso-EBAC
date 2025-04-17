@@ -36,3 +36,27 @@ def consulta_gafanhotos():
         for linha in res:
             print(f"ID: {linha['id']} - Nome: {linha['nome']}")
 
+def cadastro():
+    nome = str(input("Nome: "))
+
+    try:
+        conexao()
+
+        #Criar um cursor para executar a consulta
+        cursor = con.cursor()
+
+        #Inserir o registro na tabela usando consulta parametrizada
+        sql = "INSERT INTO gafanhotos (nome) VALUES (%s)" # Usando a consulta parametrizada
+        cursor.execute(sql, (nome))
+        con.commit()
+
+        print(f'O gafanhoto {nome} foi cadastro com sucesso')
+    except pymysql.Error as e:
+        print('Erro ao cadastrar curso', e)
+        con.rollback()
+    finally:
+        cursor.close()
+        con.close()
+        print('Conexão encerrada')
+
+cadastro()
