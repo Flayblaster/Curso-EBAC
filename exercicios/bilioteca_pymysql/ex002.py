@@ -81,4 +81,29 @@ def cadastro_mult():
         con.close()
         print('Conexão encerrada')
 
-cadastro_mult()
+def cadastro_many():
+    conexao()
+
+    nome1 = str(input('Digite o primeiro nome: '))
+    nome2 = str(input('Digite o segundo nome: '))
+    nome3 = str(input('Digite o terceiro nome: '))
+    nomes = (nome1, nome2, nome3)
+
+    cursor = con.cursor()
+    try:
+        sql = "INSERT INTO gafanhotos (nome) VALUES (%s)"
+        cursor.executemany(sql, (nomes))
+        con.commit()
+
+        print(f'Os nomes {nomes} foram cadastrados com sucesso!!')
+    except pymysql.Error as e:
+        print("Ocorreu um erro:", e)
+        con.rollback()
+
+    finally:
+        cursor.close()
+        con.close()
+        print('Conexão encerrada') 
+
+cadastro_many()
+consulta_gafanhotos()
