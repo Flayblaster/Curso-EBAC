@@ -106,4 +106,33 @@ def cadastro_many():
         print('Conexão encerrada') 
 
 cadastro_many()
+def cadastro_mult_many():
+    """
+    Faz o cadastro de vários indivíduos e vários informações sobre eles.
+    """
+    
+    conexao()
+    cursor = con.cursor()
+
+    nome_1 = str(input("Nome da primeira pessoa: "))
+    nacionalidade_1 = str(input("Nacionalidade da primeira pessoa: "))
+    nome_2 = str(input('Nome da segunda pessoa: '))
+    nacionalidade_2 = str(input("Nacionalidade da segunda pessoa: "))
+    pessoas = ([nome_1, nacionalidade_1], [nome_2, nacionalidade_2])
+
+    try:
+        sql = "INSERT INTO gafanhotos (nome, nacionalidade) VALUES (%s, %s)"
+        cursor.executemany(sql, (pessoas))
+        
+        con.commit()
+        print('Cadastro feito com sucesso')
+    except pymysql.Error as e:
+        print('Erro ao cadastrar:', e)
+        con.rollback()
+    finally:
+        cursor.close()
+        con.close()
+        print('conexão encerrada')
+
+cadastro_mult_many()
 consulta_gafanhotos()
