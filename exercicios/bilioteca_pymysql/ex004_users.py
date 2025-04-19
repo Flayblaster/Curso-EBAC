@@ -1,4 +1,5 @@
 import pymysql.cursors
+from ex004_treats import corretor_entradas
 
 def conexao():
     con = pymysql.connect(
@@ -16,8 +17,8 @@ def cadastro_users():
 
     while True:
         try:
-            nome = str(input('Nome: '))
-            cpf = str(input('CPF: '))
+            nome = corretor_entradas('Nome: ')
+            cpf = corretor_entradas('CPF: ')
 
             sql = "INSERT INTO tbl_users VALUES (%s, %s)"
             cursor.execute(sql, (cpf, nome))
@@ -40,14 +41,14 @@ def delete_user():
     cursor = con.cursor()
 
     print('1 - Nome / 2 - CPF')
-    enter = str(input('Opção de exclusão: '))
+    enter = corretor_entradas('Opção de exclusão: ')
     try:
         if '1' in enter:
-            nome = str(input('Nome: '))
+            nome = corretor_entradas('Nome: ')
             sql = 'DELETE FROM tbl_users WHERE nome=(%s)'
             cursor.execute(sql, nome)
         else:
-            cpf = str(input('CPF: '))
+            cpf = corretor_entradas('CPF: ')
             sql = 'DELETE FROM tbl_users WHERE cpf=(%s)'
             cursor.execute(sql, cpf)
         con.commit()

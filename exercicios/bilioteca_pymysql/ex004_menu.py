@@ -58,4 +58,5 @@ def menu_livraria():
         listar_some()
     else:
         menu_inicial()
+
 menu_inicial()

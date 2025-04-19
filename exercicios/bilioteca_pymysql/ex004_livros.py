@@ -1,5 +1,6 @@
 import pymysql.cursors
 from ex004_users import conexao
+from ex004_treats import corretor_entradas
 
 def cadastro_livro():
     con = conexao()
@@ -29,14 +30,14 @@ def delete_livro():
     cursor = con.cursor()
 
     print('1 - Titulo / 2 - Autor')
-    enter = str(input('Opção de exclusão: '))
+    enter = corretor_entradas('Opção de exclusão: ')
     try:
         if '1' in enter:
-            titulo = str(input('Titulo: '))
+            titulo = corretor_entradas('Titulo: ')
             sql = 'DELETE FROM tbl_estante WHERE titulo=(%s)'
             cursor.execute(sql, titulo)
         else:
-            autor= str(input('Autor: '))
+            autor = corretor_entradas('Autor: ')
             sql = 'DELETE FROM tbl_estante WHERE autor=(%s)'
             cursor.execute(sql, autor)
         con.commit()
@@ -69,23 +70,23 @@ def listar_some():
     sql = 0
 
     print('1 - Titulo / 2 - ID / 3 - Autor')
-    enter = str(input('Opção de busca: '))
+    enter = corretor_entradas('Opção de busca: ')
     if '1' in enter:
-        titulo = str(input('Titulo: '))
+        titulo = corretor_entradas('Titulo: ')
         sql = 'SELECT id, titulo, autor FROM tbl_estante WHERE titulo = (%s)'
         cursor.execute(sql, titulo)
     elif '2' in enter:
-        id_ = str(input('ID: '))
+        id_ = corretor_entradas('ID: ')
         sql = 'SELECT id, titulo, autor FROM tbl_estante WHERE id = (%s)'
         cursor.execute(sql, id_)
     else:
-        autor = str(input('Autor: '))
+        autor = corretor_entradas('Autor: ')
         sql = 'SELECT id, titulo, autor FROM tbl_estante WHERE autor = (%s)'
         cursor.execute(sql, autor)
 
     try:
         res = cursor.fetchall()
-        print(res)
+        print(f'Título: {res[0]['titulo']} /// Autor: {res[0]['autor']} /// ID: {res[0]['id']}')
     finally:
         con.close()
         cursor.close()
@@ -96,16 +97,16 @@ def atualiza_livros():
     sql = 0
 
     print('1 - Titulo / 2 - Autor')
-    enter = str(input('Opção de alteração: '))
+    enter = corretor_entradas('Opção de alteração: ')
     try:
         if '1' in enter:
-            titulo_atual = str(input('Titulo atual: '))
-            titulo_novo = str(input('Titulo novo: '))
+            titulo_atual = corretor_entradas('Titulo atual: ')
+            titulo_novo = corretor_entradas('Titulo novo: ')
             sql = 'UPDATE tbl_estante SET titulo = (%s) WHERE titulo = (%s)'
             cursor.execute(sql, (titulo_novo, titulo_atual))
         else:
-            autor_atual = str(input('Autor atual: '))
-            autor_novo = str(input('Autor novo: '))
+            autor_atual = corretor_entradas('Autor atual: ')
+            autor_novo = corretor_entradas('Autor novo: ')
             sql = 'UPDATE tbl_estante SET autor =(%s) WHERE autor = (%s)'
             cursor.execute(sql, (autor_novo, autor_atual))
         con.commit()
@@ -116,4 +117,5 @@ def atualiza_livros():
     finally:
         con.close()
         cursor.close()
+
 
