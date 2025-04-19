@@ -1,17 +1,17 @@
 import pymysql.cursors
 
 def conexao():
-    global con
     con = pymysql.connect(
-        host='basic_bd',
+        host='localhost',
         user='root',
         password='',
         database='livraria',
         cursorclass=pymysql.cursors.DictCursor
     )
+    return con
 
 def cadastro_users():
-    conexao()
+    con = conexao()
     cursor = con.cursor()
 
     while True:
@@ -36,7 +36,7 @@ def cadastro_users():
             break
 
 def delete_user():
-    conexao()
+    con = conexao()
     cursor = con.cursor()
 
     while True:
@@ -58,7 +58,3 @@ def delete_user():
             cursor.close()
             con.close()
             break
-
-cadastro_users()
-
-
