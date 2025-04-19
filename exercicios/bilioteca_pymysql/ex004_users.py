@@ -39,22 +39,22 @@ def delete_user():
     con = conexao()
     cursor = con.cursor()
 
-    while True:
-        try:
-            cpf = str(input('Deletar CPF: '))
-
-            sql = "DELETE FROM tbl_users WHERE cpf = (%s)"
+    print('1 - Nome / 2 - CPF')
+    enter = str(input('Opção de exclusão: '))
+    try:
+        if '1' in enter:
+            nome = str(input('Nome: '))
+            sql = 'DELETE FROM tbl_users WHERE nome=(%s)'
+            cursor.execute(sql, nome)
+        else:
+            cpf = str(input('CPF: '))
+            sql = 'DELETE FROM tbl_users WHERE cpf=(%s)'
             cursor.execute(sql, cpf)
-            con.commit()
-            print('Usuário deletado com sucesso')
-        except pymysql.Error as mysqlerror:
-            print('Erro ao cadastrar', mysqlerror)
-            con.rollback()
-        except TypeError as typerror:
-            print('Erro de digitação', typerror)
-            con.rollback()
-            continue
-        finally:
-            cursor.close()
-            con.close()
-            break
+        con.commit()
+        print('Alteração feita com sucesso')
+    except pymysql.Error as e:
+        print('Erro de exclusão', e)
+        con.rollback()
+    finally:
+        con.close()
+        cursor.close()
