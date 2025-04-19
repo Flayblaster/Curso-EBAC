@@ -1,4 +1,6 @@
 import pymysql.cursors
+from pymysql.connections import Connection
+
 
 #Abrir uma conexão
 def conexao():
@@ -14,6 +16,7 @@ def conexao():
         password='',
         cursorclass=pymysql.cursors.DictCursor
     )
+
 
 def consulta_cursos():
     """
@@ -44,6 +47,7 @@ def consulta_gafanhotos():
         for linha in res:
             print(f"ID: {linha['id']} - Nome: {linha['nome']}")
 
+
 def cadastro_unico():
     """
     Faz o cadastro de uma única informação por vez
@@ -68,6 +72,7 @@ def cadastro_unico():
         cursor.close()
         con.close()
         print('Conexão encerrada')
+
 
 def cadastro_mult():
     """
@@ -97,6 +102,7 @@ def cadastro_mult():
         con.close()
         print('Conexão encerrada')
 
+
 def cadastro_many():
     """
     Faz o cadastro de muitas linhas ao mesmo tempo, usando o método: .executemany()
@@ -123,6 +129,7 @@ def cadastro_many():
         cursor.close()
         con.close()
         print('Conexão encerrada') 
+
 
 def cadastro_mult_many():
     """
@@ -151,6 +158,3 @@ def cadastro_mult_many():
         cursor.close()
         con.close()
         print('conexão encerrada')
-
-cadastro_mult_many()
-consulta_gafanhotos()

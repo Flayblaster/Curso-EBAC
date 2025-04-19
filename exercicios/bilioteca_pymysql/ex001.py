@@ -1,4 +1,4 @@
-import pymysql.cursors
+import pymysql.cursors 
 
 #abrir uma conexao a um banco de dados
 
