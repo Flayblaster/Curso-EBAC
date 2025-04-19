@@ -86,3 +86,31 @@ def listar_some():
         con.close()
         cursor.close()
 
+def atualiza_livros():
+    con = conexao()
+    cursor = con.cursor()
+    sql = 0
+
+    print('1 - Titulo / 2 - Autor')
+    enter = str(input('Opção de alteração: '))
+    try:
+        if '1' in enter:
+            titulo_atual = str(input('Titulo atual: '))
+            titulo_novo = str(input('Titulo novo: '))
+            sql = 'UPDATE tbl_estante SET titulo = (%s) WHERE titulo = (%s)'
+            cursor.execute(sql, (titulo_novo, titulo_atual))
+        else:
+            autor_atual = str(input('Autor atual: '))
+            autor_novo = str(input('Autor novo: '))
+            sql = 'UPDATE tbl_estante SET autor =(%s) WHERE autor = (%s)'
+            cursor.execute(sql, (autor_novo, autor_atual))
+        con.commit()
+        print('Alteração feita com sucesso')
+    except pymysql.Error as e:
+        print('Erro de update', e)
+        con.rollback()
+    finally:
+        con.close()
+        cursor.close()
+
+atualiza_livros()
