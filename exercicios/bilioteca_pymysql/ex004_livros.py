@@ -28,20 +28,22 @@ def delete_livro():
     con = conexao()
     cursor = con.cursor()
 
+    print('1 - Titulo / 2 - Autor')
+    enter = str(input('Opção de exclusão: '))
     try:
-        titulo = str(input('Título do livro: '))
-
-        sql="DELETE FROM tbl_estante WHERE titulo=(%s)"
-        cursor.execute(sql, titulo)
-
+        if '1' in enter:
+            titulo = str(input('Titulo: '))
+            sql = 'DELETE FROM tbl_estante WHERE titulo=(%s)'
+            cursor.execute(sql, titulo)
+        else:
+            autor= str(input('Autor: '))
+            sql = 'DELETE FROM tbl_estante WHERE autor=(%s)'
+            cursor.execute(sql, autor)
         con.commit()
-        print('Livro deletado com sucesso')
+        print('Alteração feita com sucesso')
     except pymysql.Error as e:
+        print('Erro de exclusão', e)
         con.rollback()
-        print('Erro ao deletar', e)
-    except TypeError as typerror:
-        con.rollback()
-        print('Erro de digitação', typerror)
     finally:
         con.close()
         cursor.close()
@@ -54,7 +56,9 @@ def listar_all():
         sql = "SELECT * FROM tbl_estante"
         cursor.execute(sql)
         res = cursor.fetchall()
-        print(res)
+
+        for coluna in res:
+            print(f'Título: {coluna["titulo"]} /// Autor: {coluna["autor"]} /// ID: {coluna["id"]}')
     finally:
         con.close()
         cursor.close()
@@ -113,4 +117,3 @@ def atualiza_livros():
         con.close()
         cursor.close()
 
-atualiza_livros()
