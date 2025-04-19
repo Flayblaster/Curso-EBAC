@@ -1,4 +1,4 @@
-from ex004_users import cadastro_users, delete_user
+from ex004_users import cadastro_users, delete_user, atualiza_users, listar_user, listar_users
 from ex004_livros import cadastro_livro, delete_livro, atualiza_livros, listar_all, listar_some
 
 def menu_inicial():
@@ -23,7 +23,10 @@ def menu_usuarios():
     print('{:^20}'.format('MENU USUÁRIOS'))
     print('{:^17}'.format('1 - Cadastro de usuário'))
     print('{:^17}'.format('2 - Deletar usuário'))
-    print('{:^17}'.format('3 - Voltar ao ínicio'))
+    print('{:^17}'.format('3 - Editar usuário'))
+    print('{:^17}'.format('4 - Ver algum usuário'))
+    print('{:^17}'.format('5 - Ver todos usuário'))
+    print('{:^17}'.format('6 - Voltar ao ínicio'))
     print('-' * 20)
 
     opc = str(input('Opcão de navegação: '))
@@ -31,6 +34,12 @@ def menu_usuarios():
         cadastro_users()
     elif '2' in opc:
         delete_user()
+    elif '3' in opc:
+        atualiza_users()
+    elif '4' in opc:
+        listar_user()
+    elif '5' in opc:
+        listar_users()
     else:
         menu_inicial()
 
