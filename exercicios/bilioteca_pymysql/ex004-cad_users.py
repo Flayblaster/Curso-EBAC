@@ -3,7 +3,7 @@ import pymysql.cursors
 def conexao():
     global con
     con = pymysql.connect(
-        host='localhost',
+        host='basic_bd',
         user='root',
         password='',
         database='livraria',
