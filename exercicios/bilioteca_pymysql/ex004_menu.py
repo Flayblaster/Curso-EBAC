@@ -2,6 +2,11 @@ from ex004_users import cadastro_users, delete_user, atualiza_users, listar_user
 from ex004_livros import cadastro_livro, delete_livro, atualiza_livros, listar_all, listar_some
 
 def menu_inicial():
+    """
+    Gerencia todo a API, funciona como um menu, levando para toas as opções do sistema
+    opc: Variavel que recebe as opções do usuários
+    """
+
     while True:
         print('-'*20)
         print('{:^20}'.format('MENU'))
@@ -19,6 +24,11 @@ def menu_inicial():
             break
 
 def menu_usuarios():
+    """
+    Menu que gerencia a interface dos usuários
+    opc: Guarda a opção do usuário
+    """
+
     print('-' * 20)
     print('{:^20}'.format('MENU USUÁRIOS'))
     print('{:^17}'.format('1 - Cadastro de usuário'))
@@ -44,6 +54,11 @@ def menu_usuarios():
         menu_inicial()
 
 def menu_livraria():
+    """
+    Menu que gerencia a interface da livraria
+    opc: Guarda a opção do usuário
+    """
+
     print('-' * 20)
     print('{:^20}'.format('MENU LIVRARIA'))
     print('{:^17}'.format('1 - Cadastrar livros'))

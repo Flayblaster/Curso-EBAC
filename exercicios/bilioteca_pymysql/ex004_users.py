@@ -2,6 +2,11 @@ import pymysql.cursors
 from ex004_treats import corretor_entradas
 
 def conexao():
+    """
+    Faz a conexão do servidor do banco de dados com a API
+    con: Variável que armazena a conexão
+    """
+
     con = pymysql.connect(
         host='localhost',
         user='root',
@@ -12,6 +17,15 @@ def conexao():
     return con
 
 def cadastro_users():
+    """
+    Faz o cadastro dos usuários novos, pedindo o CPF e Nome
+    con: Armazena a conexão com o servidor
+    cursor: Metódo que executa os comandos no banco de dados
+    nome: Entrada do Nome
+    cpf: Entrada do CPF
+    sql: Guarda o comando do banco de dados
+    """
+
     con = conexao()
     cursor = con.cursor()
 
@@ -37,6 +51,12 @@ def cadastro_users():
             break
 
 def delete_user():
+    """
+    Deleta um usuario do banco de dados
+    con: Armazena a conexão com o servidor
+    cursor: Metódo que executa os comandos no banco de dados
+    enter: Entrada da escolha do usuário
+    """
     con = conexao()
     cursor = con.cursor()
 
@@ -61,9 +81,19 @@ def delete_user():
         cursor.close()
 
 def atualiza_users():
+    """
+    Atualiza informações de um usuários já cadastrado
+    con: Armazena a conexão com o servidor
+    enter: Entrada da escolha do usuário
+    cursor: Metódo que executa os comandos no banco de dados
+    sql: Guarda o comando do banco de dados
+    nome_atual: Nome atual do usuário
+    nome_novo: Nome novo do usuário
+    cpf_atual: Cpf atual do usuário
+    cpf_novo: Cpf novo do usuário
+    """
     con = conexao()
     cursor = con.cursor()
-    sql = 0
 
     print('1 - Nome / 2 - CPF')
     enter = corretor_entradas('Opção de alteração: ')
@@ -88,6 +118,13 @@ def atualiza_users():
         cursor.close()
 
 def listar_users():
+    """
+    Lista todos os usuários cadastrados
+    con: Armazena a conexão com o servidor
+    cursor: Metódo que executa os comandos no banco de dados
+    sql: Guarda o comando do banco de dados
+    res: Resultado em um dict
+    """
     con = conexao()
     cursor = con.cursor()
 
@@ -103,6 +140,16 @@ def listar_users():
         cursor.close()
 
 def listar_user():
+    """
+    Lista alguns usuários específicos cadastrados
+    con: Armazena a conexão com o servidor
+    cursor: Metódo que executa os comandos no banco de dados
+    enter: Guarda a entrada do usuário
+    nome: Guarda o nome do usuário
+    cpf: Guarda o cpf do usuário
+    sql: Guarda o comando do banco de dados
+    res: Resultado em um dict
+    """
     con = conexao()
     cursor = con.cursor()
     try:
@@ -116,8 +163,10 @@ def listar_user():
             cpf = corretor_entradas('CPF: ')
             sql = 'SELECT nome, cpf FROM tbl_users WHERE cpf = (%s)'
             cursor.execute(sql, cpf)
+
             res = cursor.fetchall()
             print(f'Nome: {res[0]['nome']} /// CPF: {res[0]['cpf']}')
+            return res[0]['cpf']
     except pymysql.Error as e:
         print('Erro ao mostrar informações', e)
         con.rollback()

@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas
 
 #leitura do arquivo
 arq = pd.read_csv("C:/Users/david/OneDrive/Documentos/Curso-EBAC/Curso-EBAC/exercicios/vendas.csv")
@@ -16,7 +16,6 @@ def ftm_total():
 
     return ftm_total
 
-ftm_total()
 
 def ftm_por_catga():
     #Faturamento por categoria
@@ -24,5 +23,3 @@ def ftm_por_catga():
     for categoria in df['Categoria'].unique():
         print(f'Categoria: {categoria} - Faturamento: ', end='')
         print(f"{df[df['Categoria'].str.contains(categoria)]['Faturamento'].sum():.2f}")
-    
-ftm_por_catga()
