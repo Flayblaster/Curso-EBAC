@@ -46,6 +46,6 @@ print('Qtd de registro sem duplicatas: ', df.shape[0])
 #salvar dataframe
 df['idade'] = df['idade_corrigida']
 df_salvar = df[['nome', 'cpf', 'idade', 'data', 'endereco', 'estado']]
-df_salvar.to_csv('./dataframes/clientes_limpo.csv', index=False)
+df_salvar.to_csv('./dataframes/clientes_limpo_v1.1.csv', index=False)
 
 
