@@ -25,3 +25,44 @@ print('\n', '='*100, '\n')
 colunas_numericas = df_pacientes.select_dtypes(include=np.number).columns
 
 print('Colunas Numérica Identificadas:', list(colunas_numericas))
+print('\n', '='*100, '\n')
+
+# 3. Padronizando as colunas numéricas usando StandardScaler
+scaler_padronizado = StandardScaler()
+dados_padronizados = scaler_padronizado.fit_transform(df_pacientes[colunas_numericas])
+
+# 4. Criando um DataFrame com os dados padronizados
+df_padronizado = pd.DataFrame(dados_padronizados, columns=colunas_numericas)
+
+# 5. Adicionando as colunas categóricas de volta
+df_padronizado[['fumante', 'atividade_fisica']] = df_pacientes[['fumante', 'atividade_fisica']]
+
+print('DataFrame Padronizado (StandardScaler):')
+print(df_padronizado)
+print('\n', '='*100, '\n')
+
+# 6. Normalizando as colunas numericas usando MinMaxScaler
+scaler_normalizacao = MinMaxScaler()
+dados_normalizados = scaler_normalizacao.fit_transform(df_pacientes[colunas_numericas])
+
+# 7. Criando um DataFrame com os dados normalizados
+df_normalizado = pd.DataFrame(dados_normalizados, columns=colunas_numericas)
+
+# 8. Adicionando as colunas categoricas de volta
+df_normalizado[['fumante', 'atividade_fisica']] = df_pacientes[['fumante', 'atividade_fisica']]
+
+print('DataFrame Normalizado (MinMaxScaler):')
+print(df_normalizado)
+print('\n', '='*100, '\n')
+
+# 9. Comparando as estatísticas descritivas
+print('Estatísticas Descritivas do DataFrame Original (Colunas Numéricas):')
+print(df_pacientes[colunas_numericas].describe())
+print('\n', '='*100, '\n')
+
+print('Estatisticas Descritivas do DataFrame Padronizado (Colunas Numéricas):')
+print(df_padronizado[colunas_numericas].describe())
+print('\n', '='*100, '\n')
+
+print('Estatística Descritivas do DataFrame Normalizado (Colunas Numéricas):')
+print(df_normalizado[colunas_numericas].describe())
