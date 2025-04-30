@@ -66,3 +66,4 @@ print('\n', '='*100, '\n')
 
 print('Estatística Descritivas do DataFrame Normalizado (Colunas Numéricas):')
 print(df_normalizado[colunas_numericas].describe())
+
