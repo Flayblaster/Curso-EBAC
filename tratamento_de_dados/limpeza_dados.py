@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('./dataframes/clientes.csv')
+df = pd.read_csv('../dataframes/clientes.csv')
 
 pd.set_option('display.width', None)
 
