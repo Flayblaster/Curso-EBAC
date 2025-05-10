@@ -1,0 +1,9 @@
+location,Basileia,Basileia,Basileia,Basileia,Basileia,Basileia,Basileia
+lat,47.75000,47.75000,47.75000,47.75000,47.75000,47.75000,47.75000
+lon,7.50000,7.50000,7.50000,7.50000,7.50000,7.50000,7.50000
+asl,363.653,363.653,363.653,363.653,363.653,363.653,363.653
+variable,Temperature,Precipitation Total,Cloud Cover Total,Cloud Cover High,Cloud Cover Medium,Cloud Cover Low,Sunshine Duration
+unit,°C,mm,%,%,%,%,min
+level,2 m elevation corrected,sfc,sfc,high cld lay,mid cld lay,low cld lay,sfc
+resolution,hourly,hourly,hourly,hourly,hourly,hourly,hourly
+aggregation,None,None,None,None,None,None,None
