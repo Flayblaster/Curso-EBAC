@@ -15,5 +15,8 @@ for ind1, ind2 in zip(range(0, 43872, 24), range(24, 43872, 24)):
     temp_media[mth] = media
 
 fig, ax = plt.subplots()
-ax.plot(temp_media.keys(), temp_media.values())
+ax.plot(temp_media.keys(), temp_media.values(), color='blue')
+plt.title('Temperatura Média de Basileia')
+plt.xlabel('Anos')
+plt.ylabel('Temperatura Média (ºC)')
 plt.show()
