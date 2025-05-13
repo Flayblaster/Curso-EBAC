@@ -10,12 +10,11 @@ df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
 
 temp_media = dict()
 
-for ind1, ind2 in zip(range(0, 43872, 24), range(24, 43872, 24)):
-    media = (df['Temperature'][ind1:ind2].mean())
-    mth = df['timestamp'][ind1].strftime('%Y/%m/%d')
-    temp_media[mth] = media
-print(temp_media)
-print(len(temp_media))
+for i1, i2 in zip(range(0, 43872, 24), range(24, 43872, 24)):
+    media = df['Temperature'][i1:i2].mean()
+    mes = df['timestamp'][i1].strftime('%Y/%m/%d')
+    temp_media[mes] = media
+
 
 fig, ax = plt.subplots()
 ax.plot(temp_media.keys(), temp_media.values(), color='blue')
