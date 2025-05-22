@@ -14,3 +14,20 @@ plt.xlabel('Education Levels')
 plt.ylabel('Amount of People')
 plt.xticks(rotation=0) #Rotacao do texto
 plt.show()
+
+#Pizza graphic
+plt.figure(figsize=(10, 6))
+plt.pie(education_count, labels=level_of_scholarity, autopct='%.1f%%', startangle=90)
+plt.title('Distribuição de Nível de Educação')
+plt.show()
+
+#Hexbin
+plt.hexbin(df['idade'], df['salario'], gridsize=40, cmap='Blues')
+plt.colorbar(label='Contagem dentro do bin')
+plt.xlabel('Idade')
+plt.ylabel('Salário')
+plt.title('Dispersão de Idade e Salário')
+plt.show()
+
+#Make a pizza graphic
+plt.figure(figsize=(8, 8))
